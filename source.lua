@@ -240,7 +240,7 @@ Configuration.RainbowDelay = ImportedConfiguration["RainbowDelay"] or 5
 --! Constants
 
 local Player = Players.LocalPlayer
-local Mouse = Player:screencenter()
+local Mouse = Player:mouse()
 local IsComputer = UserInputService.KeyboardEnabled and UserInputService.MouseEnabled
 
 local MonthlyLabels = { "🎅%s❄️", "☃️%s🏂", "🌷%s☘️", "🌺%s🎀", "🐝%s🌼", "🌈%s😎", "🌞%s🏖️", "☀️%s💐", "🌦%s🍁", "🎃%s💀", "🍂%s☕", "🎄%s🎁" }
@@ -2499,3 +2499,4 @@ local AimbotLoop; AimbotLoop = RunService[UISettings.RenderingMode]:Connect(func
     end
 
 end)
+
