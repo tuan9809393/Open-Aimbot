@@ -2112,8 +2112,8 @@ function VisualsHandler:VisualizeFoV()
     if not Fluent then
         return self:ClearVisuals()
     end
-    local MouseLocation = UserInputService:GetMouseLocation()
-    Visuals.FoV.Position = Vector2.new(MouseLocation.X, MouseLocation.Y)
+    local ScreenSize = workspace.CurrentCamera.ViewportSize
+    Visuals.FoV.Position = Vector2.new(ScreenSize.X / 2, ScreenSize.Y / 2)
     Visuals.FoV.Radius = Configuration.FoVRadius
     Visuals.FoV.Thickness = Configuration.FoVThickness
     Visuals.FoV.Transparency = Configuration.FoVOpacity
@@ -2499,4 +2499,5 @@ local AimbotLoop; AimbotLoop = RunService[UISettings.RenderingMode]:Connect(func
     end
 
 end)
+
 
