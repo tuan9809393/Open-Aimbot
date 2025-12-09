@@ -2113,7 +2113,7 @@ function VisualsHandler:VisualizeFoV()
         return self:ClearVisuals()
     end
         local ScreenSize = workspace.CurrentCamera.ViewportSize
-    Visuals.FoV.Position = ScreenCenter
+    Visuals.FoV.Position = Vector2.new(ScreenSize.X / 2, ScreenSize.Y / 2)
     Visuals.FoV.Radius = Configuration.FoVRadius
     Visuals.FoV.Thickness = Configuration.FoVThickness
     Visuals.FoV.Transparency = Configuration.FoVOpacity
@@ -2499,4 +2499,5 @@ local AimbotLoop; AimbotLoop = RunService[UISettings.RenderingMode]:Connect(func
     end
 
 end)
+
 
